@@ -15,7 +15,7 @@ export default function Home() {
       <main className="flex flex-col items-center gap-8">
         <Image
           className="rounded-full"
-          src="/logo.svg"  // Update with your actual logo
+          src="/logo.svg" 
           alt="Website Logo"
           width={180}
           height={180}
@@ -23,10 +23,9 @@ export default function Home() {
         />
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          {/* Keep the login button as it is */}
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-500 text-white gap-2 hover:bg-blue-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="/login" // This is your login page link
+            href="/login" 
           >
             Start Here
           </a>

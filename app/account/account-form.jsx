@@ -43,7 +43,6 @@ export default function AccountForm({ user }) {
         Welcome, {user?.email || 'User'}!
       </h1>
 
-      {/* Email display */}
       <div style={{
         marginBottom: '20px',
         textAlign: 'center',
@@ -52,7 +51,7 @@ export default function AccountForm({ user }) {
       }}>
         <label htmlFor="email" style={{
           fontSize: '16px', 
-          color: '#ddd',  // Lighter gray text for labels
+          color: '#ddd',
           marginBottom: '5px', 
           display: 'block'
         }}>
@@ -75,8 +74,16 @@ export default function AccountForm({ user }) {
           }} 
         />
       </div>
+      <div style={{ width: '100%', maxWidth: '400px' }}>
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-500 text-white gap-2 hover:bg-blue-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="/information" 
+          >
+            Go to profile
+          </a>
+          </div>
+          <br></br>
 
-      {/* Sign out button */}
       <div style={{ width: '100%', maxWidth: '400px' }}>
         <form action="/auth/signout" method="post">
           <button 
