@@ -84,6 +84,18 @@ export default function AccountForm({ user }) {
           </div>
           <br></br>
 
+          <div style={{ width: '100%', maxWidth: '400px' }}>
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-blue-500 text-white gap-2 hover:bg-blue-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="/todo" 
+          >
+            To do list
+          </a>
+          </div>
+          <br></br>
+
+
+
       <div style={{ width: '100%', maxWidth: '400px' }}>
         <form action="/auth/signout" method="post">
           <button 
