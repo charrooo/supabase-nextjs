@@ -34,6 +34,59 @@ export type Database = {
   }
   public: {
     Tables: {
+      photos: {
+        Row: {
+          created_at: string | null
+          id: number
+          name: string
+          url: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: number
+          name: string
+          url: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: number
+          name?: string
+          url?: string
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          content: string
+          created_at: string | null
+          id: number
+          photo_id: number | null
+          rating: number
+        }
+        Insert: {
+          content: string
+          created_at?: string | null
+          id?: number
+          photo_id?: number | null
+          rating: number
+        }
+        Update: {
+          content?: string
+          created_at?: string | null
+          id?: number
+          photo_id?: number | null
+          rating?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_photo_id_fkey"
+            columns: ["photo_id"]
+            isOneToOne: false
+            referencedRelation: "photos"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       todos: {
         Row: {
           id: number
